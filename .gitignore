@@ -21,3 +21,5 @@ mozu.config.json
 
 # Visual Studio Code
 /.vs
+
+mozu.config.json
