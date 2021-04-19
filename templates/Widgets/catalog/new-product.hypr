@@ -1,0 +1,6 @@
+
+<div class="new-item">
+   <h3 class="new-item-name">{{model.config.productName}}</h3>
+   <h5 class="new-item-type">{{model.config.productType}}</h5>
+   <img class="new-item-image" src="{% make_url "image" model.config.productImage %}"/>
+</div>

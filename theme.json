@@ -1556,7 +1556,8 @@
     },
     {
       "defaultConfig": {
-        "title": "Related Items"
+        "title": "Related Items",
+        "type": "Random"
       },
       "displayName": "Instock Request",
       "displayTemplate": "misc/instock-request",
@@ -1564,13 +1565,20 @@
         {
           "anchor": "100%",
           "fieldLabel": "Title",
+          "name": "title",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Type",
+          "name": "type",
           "xtype": "mz-input-text"
         }
       ],
       "icon": "/resources/admin/widgets/25_instock_requests.png",
       "id": "instockrequest",
       "validPageTypes": [
-        "product"
+        "*"
       ]
     },
     {
@@ -1766,6 +1774,37 @@
       "validPageTypes": [
         "*"
       ]
-}
+    },{
+      "defaultConfig":{
+        "productName":"Product Name",
+        "productType":"Product Type"
+      },
+      "displayName":"New Product",
+      "displayTemplate":"catalog/new-product",
+      "editViewFields":[
+        {
+          "anchor": "100%",
+          "fieldLabel": "Name",
+          "name": "productName",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Type",
+          "name": "productType",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Product Image",
+          "name": "productImage",
+          "xtype": "mz-input-image"
+        }
+      ],
+      "validPageTypes":[
+        "*"
+      ],
+      "id":"new-product"
+    }
   ]
 }
