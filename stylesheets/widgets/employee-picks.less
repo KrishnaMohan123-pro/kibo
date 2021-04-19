@@ -1,0 +1,56 @@
+#wrapper {
+	max-width: @productTileWidth;     
+	text-align:left;
+}
+  
+ul#employee_cards {
+  
+	text-align:center;
+	padding: 0;
+
+	li {
+		display:block;
+		float:left;
+		border:1px solid #666;
+		padding:25px 10px;
+		position:relative;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-box-shadow: 2px 2px 10px #000;
+		-webkit-box-shadow: 2px 2px 10px #000;
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+
+		p {
+			margin-top:4px;
+			text-align:left;
+			line-height:28px;  
+		}
+
+		img {
+			margin-top:7px;
+			background:#eee;
+			height: @productListingThumbSize;
+			width: @productListingThumbSize;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-box-shadow: 0px 0px 5px #aaa;
+			-webkit-box-shadow: 0px 0px 5px #aaa;
+		}
+	}
+  
+
+	li:hover {
+		z-index:4;
+	}
+}  
+  
+#card {
+	background-color:#69732B;
+	z-index:3;
+}
+
+#card:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1); 
+}

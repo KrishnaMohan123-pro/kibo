@@ -5,10 +5,14 @@
 
 .mz-pageheader {
     position: relative;
-    height: 154px;
+    height: 100px;
     background: #eee;
     &.mz-pageheader-hasbanner {
-        background: #eee url('{{themeSettings.bannerImage}}') {{ themeSettings.bannerImageRepeat }};
+        background-color: #000;
+        background-image: url('{{themeSettings.bannerImage}}');
+        background-repeat: {{ themeSettings.bannerImageRepeat }};
+        background-size:cover;
+        background-position:center;
     }
     padding: @gutter/2 @gutter 0;
 
@@ -17,22 +21,26 @@
         left: @gutter;
         top: @headerBaseline - @storeBrandingFontSize - 2;
     }
+    .mz-storebranding a{
+        color: @linkColor;
+        font-size: larger;
+    }
 
     &.mz-pageheader-hasbanner .mz-storebranding {
-        text-indent: -9999px;
+        text-indent: 0px;
     }
 
     .mz-utilitynav {
         position: absolute;
-        top: @gutter/2;
+        top: @gutter*1.75;
         right: @gutter;
         height: @utilityNavHeight;
     }
 
     .mz-searchbox {
         position: absolute;
-        top: @utilityNavHeight + ( @gutter / 2 );
-        right: @gutter;
+        top: @gutter*1.75;
+        left:@gutter * 14;
     }
 
     .mz-searchbox-my-store {
@@ -40,6 +48,16 @@
     }
 
     @media only screen {
+        @media (max-width: 1024px) {
+            .mz-searchbox{
+                top:@gutter*2.5;
+                left: @gutter*20;
+            }
+            .mz-utilitynav{
+                top:@gutter;
+                right: @gutter - 3px;
+            }
+        }
         @media (max-width: 768px) {
             height: auto;
             .mz-storebranding, .mz-searchbox, .mz-utilitynav {

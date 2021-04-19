@@ -6,12 +6,11 @@
     "isDesktop": true,
     "isMobile": false,
     "isTablet": false,
-    "name": "KrishnaMFirst",
+    "name": "QuickStart",
     "allowProduction": true,
     "baseTheme": "https://github.com/mozu/core-theme.git",
     "baseThemeVersion": {
-      "commit": "f0f8b817b972693565d1decd23f59e065219a99d",
-      "version": "1.2113.1"
+      "commit": "885a87dbad3fee2994a8d54eb055858236316d15"
     },
     "baseThemeChannel": "stable"
   },
@@ -565,6 +564,64 @@
                       },
                       "definitionId": "content",
                       "isRichText": true
+                    },{
+                      "defaultConfig": {
+                        "field1": "Name",
+                        "field2": "Age",
+                        "employeeRecommendation": "I suggest..."
+                      },
+                      "displayName": "Employee Picks",
+                      "displayTemplate": "misc/employee-picks",
+                      "editViewFields": [
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Card Background",
+                          "name": "cardBackground",
+                          "xtype": "mz-input-image"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Employee Image",
+                          "name": "employeeImage",
+                          "xtype": "mz-input-image"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Field 1",
+                          "name": "field1",
+                          "xtype": "mz-input-text"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Field 1 Value",
+                          "name": "field1Value",
+                          "xtype": "mz-input-text"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Field 2",
+                          "name": "field2",
+                          "xtype": "mz-input-text"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Field 2 Value",
+                          "name": "field2Value",
+                          "xtype": "mz-input-text"
+                        },
+                        {
+                          "anchor": "100%",
+                          "fieldLabel": "Employee Recommendation",
+                          "name": "employeeRecommendation",
+                          "xtype": "mz-input-textarea"
+                        }
+                            
+                      ],
+                      "icon": "/resources/admin/widgets/30_employee_picks.png",
+                      "id": "employee-picks",
+                      "validPageTypes": [
+                        "*"
+                      ]
                     }
                   ]
                 }
@@ -811,9 +868,9 @@
     "zipCodeEnabled": true,
     "phoneNumberEnabled": true,
     "billingEmailEnabled": true,
-    "bannerImage": "/resources/images/banner.jpg",
-    "bannerImageEnabled": false,
-    "bannerImageRepeat": "repeat-x",
+    "bannerImage": "../resources/images/banner.jpg",
+    "bannerImageEnabled": true,
+    "bannerImageRepeat": "no-repeat",
     "bodyBackgroundColor": "#FFFFFF",
     "cmsTextStyles": [
       {
@@ -1663,6 +1720,52 @@
       "validPageTypes": [
         "*"
       ]
-    }
+    },{
+      "defaultConfig": {
+        "field1": "Name",
+        "field2": "Age",
+        "employeeRecommendation": "I suggest..."
+      },
+      "displayName": "Employee Picks",
+      "displayTemplate": "misc/employee-picks",
+      "editViewFields": [
+        {
+          "anchor": "100%",
+          "fieldLabel": "Card Background",
+          "name": "cardBackground",
+          "xtype": "mz-input-image"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Employee Image",
+          "name": "employeeImage",
+          "xtype": "mz-input-image"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Name",
+          "name": "field1",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Age",
+          "name": "field2",
+          "xtype": "mz-input-text"
+        },
+        {
+          "anchor": "100%",
+          "fieldLabel": "Employee Recommendation",
+          "name": "employeeRecommendation",
+          "xtype": "mz-input-textarea"
+        }
+            
+      ],
+      "icon": "/resources/admin/widgets/30_employee_picks.png",
+      "id": "employee-picks",
+      "validPageTypes": [
+        "*"
+      ]
+}
   ]
 }

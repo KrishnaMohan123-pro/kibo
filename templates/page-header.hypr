@@ -1,0 +1,1 @@
+<header class="mz-pageheader{% if themeSettings.bannerImageEnabled %} mz-pageheader-hasbanner {% endif %}">

@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                 options: { devel: true }
             },
             options: {
-                es3: true,
+                esnext: true, // Allow es6 syntax
                 browser: true,
                 undef: true,
                 nonstandard: true,
@@ -67,7 +67,12 @@ module.exports = function (grunt) {
                     define: true,
                     require: true,
                     Modernizr: true,
-                    Promise: true
+                    URLSearchParams: true,
+                    mapboxgl: true,
+                    MapboxGeocoder: true,
+                    Promise: true,
+                    MagicZoom: true,
+                    IntersectionObserver: true
                 }
             }
         },
@@ -123,7 +128,11 @@ module.exports = function (grunt) {
                 ]
             },
             'javascript': {
-                'files': ['scripts/**/*.js'],
+              'files': [
+                'scripts/**/*.js',
+                'scripts/**/**/*.js',
+                'scripts/**/**/**/*.js'
+              ],
                 'tasks': [
                     'newer:jshint:develop',
                     'mozutheme:quickcompile',
@@ -199,7 +208,7 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('default', [
         'build',
-        'watch:sync',
+        //'watch:sync',
         'mozusync:upload',
         'mozutheme:check'
     ]);
