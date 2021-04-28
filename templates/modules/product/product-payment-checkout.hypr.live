@@ -1,0 +1,15 @@
+<div class="container-fluid payment-checkout-options-container">
+    <div class="row quantity-row">
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="2">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div class="row button-row">
+        <button class="btn btn-warning add-to-cart-button"> Add to Cart </button>
+        <button class="btn btn-warning buy-now-button"> Buy Now </button> 
+    </div>
+</div>

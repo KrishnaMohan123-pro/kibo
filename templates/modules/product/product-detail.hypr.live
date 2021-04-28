@@ -1,4 +1,7 @@
-{% if model.content.productShortDescription and themeSettings.showProductDetailShortDesc %}
+{% comment %}
+ 
+
+ {% if model.content.productShortDescription and themeSettings.showProductDetailShortDesc %}
 <div class="mz-productdetail-shortdesc mz-l-stack-section">
   <h4 class="mz-l-stack-sectiontitle">{{ labels.shortDesc }}</h4>
   <span itemscope="description">{{ model.content.productShortDescription|safe }}</span>
@@ -203,4 +206,70 @@
     {% endif %}
   {% endfor %}
 </div>
-{% endif %}
+{% endif %}  
+{% endcomment %}
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2 detail-label price-label">
+      <p>{{labels.price}}</p>
+    </div>
+    <div class="col-lg-7 detail price">
+      <p>{{model.price.price|currency}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2 detail-label">
+      <p>{{labels.productCode}}</p>
+    </div>
+    <div class="col-lg-7 detail">
+      <p>{{model.productCode}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2 detail-label">
+      <p>{{labels.fullDesc}}</p>
+    </div>
+    <div class="col-lg-7 detail">
+        {% if model.categories.0.content.description %}
+        <p>{{model.categories.0.content.description}}</p>
+        {% else %}
+        <p>No Description</p>
+        {% endif %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2 detail-label">
+      <p>{{labels.properties}}</p>
+    </div>
+    <div class="col-lg-7 detail">
+        <p>No Properties Available</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2 detail-label">
+      <p>{{labels.measurements}}</p>
+    </div>
+    <div class="col-lg-7 detail">
+      <table class="table table-hover">
+        <tr>
+          <td>{{labels.weight}}</td><td>{{model.measurements.packageWeight.value}} {{model.measurements.packageWeight.unit}}</td>
+        </tr>
+        <tr>
+          <td>{{labels.height}}</td><td>{{model.measurements.packageHeight.value}} {{model.measurements.packageHeight.unit}}</td>
+        </tr>
+        <tr>
+          <td>{{labels.length}}</td><td>{{model.measurements.packageLength.value}} {{model.measurements.packageLength.unit}}</td>
+        </tr>
+        <tr>
+          <td>{{labels.width}}</td><td>{{model.measurements.packageWidth.value}} {{model.measurements.packageWidth.unit}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+ {% dump model %} 

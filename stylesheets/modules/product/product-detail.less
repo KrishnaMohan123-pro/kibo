@@ -94,3 +94,30 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+.container-fluid{
+    text-align: left;
+    margin:0;
+    .row{
+        
+        .detail-label{
+            font-size:@fontSize;
+            border-right:1px gray solid;
+            color:grey;
+        }
+        .detail{
+            font-size: @fontSizeLarger ;
+            margin-left:@gutter;
+            table{
+                width: 300px;
+            }
+        }
+        .detail-label.price-label{
+            font-size: @fontSizeLarger;
+        }
+        .detail.price{
+            font-size: @fontSizeLarge;
+        }
+        
+    }
+}

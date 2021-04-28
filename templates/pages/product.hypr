@@ -14,7 +14,8 @@
 
 	<h1 class="mz-pagetitle" itemprop="name">{{ model.content.productName }}</h1>
 	
-    <div data-mz-productimages class="mz-productimages mz-l-sidebar">
+    {% comment %}
+ <div data-mz-productimages class="mz-productimages mz-l-sidebar">
         {% include "modules/product/product-images" %}
     </div>
 
@@ -23,8 +24,19 @@
         <div id="product-detail" class="mz-productdetail mz-l-stack">
             {% include "modules/product/product-detail" %}
         </div>
+    </div> 
+{% endcomment %}
+    <div class="row">
+        <div class="col-lg-5">
+            {% include "modules/product/product-images" %}
+        </div>
+        <div class="col-lg-5">
+            {% include "modules/product/product-detail" %}
+        </div>
+        <div class="col-lg-2">
+            {% include "modules/product/product-payment-checkout" %}
+        </div>
     </div>
-
 </div>
 
 {% endblock body-content %}

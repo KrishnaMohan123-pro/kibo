@@ -1,0 +1,28 @@
+.payment-checkout-options-container {
+  border: #D5D9D9 solid 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+.payment-checkout-options-container .row button {
+  width: 90%;
+  font-family: "Amazon Ember", sans-serif;
+  border: 1px solid gray;
+  color: black;
+  padding: 10px;
+  margin: 10px auto;
+}
+.payment-checkout-options-container .row button:hover,
+.payment-checkout-options-container .row button:focus,
+.payment-checkout-options-container .row button:active {
+  color: black;
+  border: 1px solid gray;
+}
+.payment-checkout-options-container .row #quantity {
+  width: 40px;
+}
+.payment-checkout-options-container .add-to-cart-button {
+  background-image: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+.payment-checkout-options-container .buy-now-button {
+  background-image: linear-gradient(to bottom, #f6c88f, #ed9220);
+}
